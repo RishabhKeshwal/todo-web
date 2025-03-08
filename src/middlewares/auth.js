@@ -12,6 +12,10 @@ export function auth(req) {
   const protectedRoutes = ["/todo"]; // Add more routes as needed (e.g., "/dashboard")
   const authRoutes = ["/login", "/register"];
 
+  // if (!token) {
+  //   return NextResponse.redirect(new URL("/login", req.url));
+  // }
+
   try {
     if (token) {
       // Verify token
